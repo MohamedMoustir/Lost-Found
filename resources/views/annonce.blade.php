@@ -85,9 +85,9 @@
                 <label for="category_id" class="block text-sm font-medium text-gray-700 mb-2">Category</label>
                 <select id="category_id" name="category" 
                     class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                    <option value="Electronics">Electronics</option>
-                    <option value="Clothing">Clothing</option>
-                    <option value="Books">Books</option>
+                    <option value="1">Electronics</option>
+                    <option value="2">Clothing</option>
+                    <option value="3">Books</option>
                 </select>
             </div>
 
@@ -186,9 +186,9 @@
                 <label for="category_id" class="block text-sm font-medium text-gray-700 mb-2">Category</label>
                 <select id="category_id" name="category" 
                     class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                    <option value="Electronics">Electronics</option>
-                    <option value="Clothing">Clothing</option>
-                    <option value="Books">Books</option>
+                    <option value="1">Electronics</option>
+                    <option value="2">Clothing</option>
+                    <option value="3">Books</option>
                 </select>
             </div>
 

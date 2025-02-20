@@ -17,10 +17,10 @@ class Annonce extends Model
         'location',
         'type',
         'status',
-        'category',
         'image',
         'date_of_event',
         'user_id',
+        'category_id',
     ];
     public $timestampes = false;
 

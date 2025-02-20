@@ -16,13 +16,13 @@ return new class extends Migration {
             $table->text('description');
             $table->string('location'); 
             $table->enum('type', ['lost', 'found']);
-            $table->enum('status', ['active', 'resolved', 'closed'])->default('active');
-            $table->string('category');  
+            $table->enum('status', ['active', 'resolved', 'closed'])->default('active');  
             $table->string('image'); 
             $table->date('date_of_event');
-
+            $table->unsignedBigInteger('category_id');  
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
             $table->timestamps();
         });

@@ -48,17 +48,17 @@ class AnnonceController extends Controller
     }
     public function store(Request $request)
     {
+   
         $request->validate([
             'title' => 'required',
             'description' => 'required',
             'location' => 'required',
             'type' => 'required',
-            'category' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'date_of_event' => 'required|date|date_format:Y-m-d',
             'user_id' => 'required',
+            'category'=>'required',
         ]);
-
         $imagePath = $request->file('image')->store('images', 'public');
 
         Annonce::create([
@@ -66,12 +66,12 @@ class AnnonceController extends Controller
             'description' => $request->description,
             'location' => $request->location,
             'type' => $request->type,
-            'category' => $request->category,
             'image' => $imagePath,
             'date_of_event' => $request->date_of_event,
+            'category_id'=>$request->category,
             'user_id' => Auth::id(),
         ]);
-
+        
         return redirect()->route('annonce.create')->with('success', 'Post ajouté avec succès');
     }
     public function getDetaile($id)
@@ -126,7 +126,7 @@ class AnnonceController extends Controller
         $annonces->description = $request->input('description');
         $annonces->location = $request->input('location');
         $annonces->type = $request->input('type');
-        $annonces->category = $request->input('category');
+        $annonces->category_id = $request->input('category');
         $annonces->date_of_event = $request->input('date_of_event');
 
         $imagePath = $request->file('image')->store('images', 'public');

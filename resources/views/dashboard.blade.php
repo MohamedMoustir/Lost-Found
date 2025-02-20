@@ -81,7 +81,7 @@
             <form action ='{{ route('annonce.index') }}' class="flex flex-col space-y-4">
                 <div class="flex items-center bg-gray-50 rounded-md border border-gray-300">
                     <i class="fas fa-search text-gray-400 px-4"></i>
-                    <input type="text" name="search" placeholder="Rechercher un objet perdu..." 
+                    <input type="text" name="search" placeholde²r="Rechercher un objet perdu..." 
                            class="w-full px-4 py-3 bg-transparent border-none focus:outline-none focus:ring-0">
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
